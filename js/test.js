@@ -4,6 +4,7 @@ canvas.width = 1000;
 canvas.height = 600;
 canvas.style.backgroundColor = '#000';
 
+class Ball {
     constructor(x, y, color) {
         this.x = x;
         this.y = y;
@@ -26,7 +27,7 @@ class moveBall extends Ball {
         this.dy = _.random(-5, 5);
         this.dr = _.random(1, 3);
     }
-    upDate() {
+    gradualChange() {
         this.x += this.dx;
         this.y += this.dy;
         this.r -= this.dr;
@@ -46,6 +47,6 @@ setInterval(function(params) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < ballArr.length; i++) {
         ballArr[i].render();
-        ballArr[i].upDate();
+        ballArr[i].gradualChange();
     }
 }, 40);
