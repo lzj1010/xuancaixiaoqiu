@@ -4,7 +4,6 @@ canvas.width = 1000;
 canvas.height = 600;
 canvas.style.backgroundColor = '#000';
 
-class Ball {
     constructor(x, y, color) {
         this.x = x;
         this.y = y;
